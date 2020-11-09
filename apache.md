@@ -22,3 +22,9 @@ vi /etc/php7.4/apache2/php.ini
 ;;
 expose_php off 
 ```
+## Disable autoindex globally 
+
+```
+a2dismod -f autoindex
+systemctl restart apache2
+```
