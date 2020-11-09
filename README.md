@@ -154,6 +154,8 @@ timer
 ```
 systemctl tab-taste tab-taste -> zeigt alle subcommands 
 systemctl get-default # default runlevel -> default target 
+systemctl set-default multi-user  
+systemctl isolate multi-user.target 
 
 
 ```
