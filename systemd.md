@@ -1,6 +1,17 @@
 # systemd 
 
-## Important commands 
+## Commands 
+
+```
+systemctl is-enabled ssh
+systemctl status ssh 
+systemctl enable ssh 
+systemctl disable ssh 
+
+```
+
+
+## Important commands II
 
 ```
 3  hostnamectl set-hostname server1.training.local
