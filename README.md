@@ -7,7 +7,8 @@
 ```
 Installation on Ubuntu 20.04 LTS
 https://launchpad.net/~mrazavi/+archive/ubuntu/gvm
-https://www.osboxes.org/ubuntu/
+# https://www.osboxes.org/ubuntu/
+# Done with vagrant init ubuntu/focal64 instead 
 
 https://<ip>:9392
 
