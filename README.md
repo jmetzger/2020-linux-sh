@@ -160,6 +160,7 @@ systemctl isolate multi-user.target
 systemctl list-unit-files -t target # show all targets 
 systemctl list-units -t target # 
 
+systemctl status sshd 
 
 ```
 
