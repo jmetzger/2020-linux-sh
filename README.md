@@ -156,6 +156,9 @@ systemctl tab-taste tab-taste -> zeigt alle subcommands
 systemctl get-default # default runlevel -> default target 
 systemctl set-default multi-user  
 systemctl isolate multi-user.target 
+# 
+systemctl list-unit-files -t target # show all targets 
+systemctl list-units -t target # 
 
 
 ```
