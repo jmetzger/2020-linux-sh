@@ -38,3 +38,12 @@ ssh-keygen
 ssh-copy-id training@server2
 ssh training@server2
 ```
+
+## Work with public with password and agent 
+
+```
+ eval $(ssh-agent)
+ ssh-add
+ ssh training@server2
+```
+
