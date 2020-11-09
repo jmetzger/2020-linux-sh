@@ -28,3 +28,13 @@ usermod -aG sshallow trainer01
 systemctl reload ssh
 
 ```
+
+## Work with public / private key 
+
+```
+# on server1 
+ssh-keygen 
+#ssh-keygen -t dsa 
+ssh-copy-id training@server2
+ssh training@server2
+```
