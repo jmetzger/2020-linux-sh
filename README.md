@@ -137,3 +137,18 @@ Installation (backdoor)
       V
 Command / Control (C2) 
 ```
+
+## Systemd 
+
+### units 
+
+```
+service 
+mounts
+target
+timer 
+```
+
+### systemctl 
+
+```
