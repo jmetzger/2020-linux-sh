@@ -5,6 +5,7 @@
   1. [OpenVAS](openvas.md)
   1. [Apache](apache.md) 
   1. [SSH-Absicherung](ssh.md) 
+  1. [Find vulnerabilites with shodan](shodan.io) 
 
   
 ## Kill chain 
