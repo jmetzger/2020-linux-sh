@@ -6,6 +6,7 @@
   1. [Apache](apache.md) 
   1. [SSH-Absicherung](ssh.md) 
   1. [Find vulnerabilites with shodan](shodan.io) 
+  1. [umask](umask.io) 
 
   
 ## Kill chain 
