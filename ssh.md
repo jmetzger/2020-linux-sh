@@ -9,4 +9,10 @@ https://www.youtube.com/watch?v=SKhKNUo6rJU
 
   * man sshd_config 
   
-  
+ ## hardening sshd_config 
+ 
+```
+X11Forwarding no
+# No sftp please !! comment to set default to no 
+# Subsystem     sftp    /usr/lib/openssh/sftp-server
+```
