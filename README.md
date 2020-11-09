@@ -13,14 +13,15 @@ https://launchpad.net/~mrazavi/+archive/ubuntu/gvm
 # postgresql is needed
 sudo apt install -y postgresql 
 sudo add-apt-repository ppa:mrazavi/gvm
-sudo apt install gvm
+sudo apt install -y gvm
 # only from one machine (when same source ip) at a time 
+greenbone-nvt-sync
+sudo greenbone-scapdata-sync
+sudo greenbone-certdata-sync
 
+You can access the Greenbone Security Assistant web interface at:
 
-
-https://<ip>:9392
-
-(The port number has changed according to the upstream in the new version and the old 4000 port number is no longer the default)
+https://localhost:9392
 
 The default username/password is as follows:
 
@@ -32,6 +33,9 @@ You can check the status of greenbone daemons with systemctl:
 systemctl status ospd-openvas # scanner
 systemctl status gvmd # manager
 systemctl status gsad # web ui
+
+# change /etc/default 
+https://<ip>:9392
 
 ```
 
