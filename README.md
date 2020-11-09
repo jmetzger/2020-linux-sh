@@ -152,3 +152,10 @@ timer
 ### systemctl 
 
 ```
+systemctl tab-taste tab-taste -> zeigt alle subcommands 
+systemctl get-default # default runlevel -> default target 
+
+
+```
+
+## OpenVAS 
