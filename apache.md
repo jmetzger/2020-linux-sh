@@ -14,3 +14,11 @@ systemctl reload apache2
 
 # 
 echo " " > /var/www/html/index.html 
+```
+## Fixing php 
+
+```
+vi /etc/php7.4/apache2/php.ini 
+;;
+expose_php off 
+```
