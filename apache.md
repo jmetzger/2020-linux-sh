@@ -42,3 +42,13 @@ root@server2:/etc/apache2/conf-enabled# cat z_db_security.conf
 systemctl reload apache2 
 
 ```
+
+## Blank Error-Documents 
+
+```
+# root@server2:/etc/apache2/conf-enabled# cat z_db_security.conf
+ErrorDocument 404 " "
+ErrorDocument 403 " "
+ErrorDocument 500 " "
+# systemctl reload apache2 
+```
