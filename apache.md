@@ -28,3 +28,17 @@ expose_php off
 a2dismod -f autoindex
 systemctl restart apache2
 ```
+
+## Disable autoindex per Directory 
+
+```
+root@server2:/etc/apache2/conf-enabled# cat z_db_security.conf
+
+<Directory /var/www/html>
+  Options -Indexes
+</Directory>
+
+# After change 
+systemctl reload apache2 
+
+```
