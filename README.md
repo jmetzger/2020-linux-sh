@@ -10,6 +10,14 @@ https://launchpad.net/~mrazavi/+archive/ubuntu/gvm
 # https://www.osboxes.org/ubuntu/
 # Done with vagrant init ubuntu/focal64 instead 
 
+# postgresql is needed
+sudo apt install -y postgresql 
+sudo add-apt-repository ppa:mrazavi/gvm
+sudo apt install gvm
+# only from one machine (when same source ip) at a time 
+
+
+
 https://<ip>:9392
 
 (The port number has changed according to the upstream in the new version and the old 4000 port number is no longer the default)
