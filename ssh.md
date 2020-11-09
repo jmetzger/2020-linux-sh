@@ -16,3 +16,15 @@ X11Forwarding no
 # No sftp please !! comment to set default to no 
 # Subsystem     sftp    /usr/lib/openssh/sftp-server
 ```
+
+## Only specific users 
+
+```
+# /etc/ssh/sshd_config 
+AllowGroups sshallow
+### 
+groupadd sshallow
+usermod -aG sshallow trainer01
+systemctl reload ssh
+
+```
