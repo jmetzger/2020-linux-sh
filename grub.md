@@ -22,3 +22,10 @@ emergency
 # aber: kein Netzwerk und Single-User  
 systemd.unit=rescue.target 
 ```
+
+## man-page kernel parameters 
+
+```
+man kernel-command-line # debian/ubuntu
+man kernel-params # centos / redhat 
+```
