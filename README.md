@@ -10,6 +10,7 @@
   1. [Telekom Security Framework](telekom.md)
   1. [Unattended Upgrades](unattended-upgrades.md) 
   1. [Walkthrough to identify and shutdown service](identify-service.md)
+  1. [Disable Kernel Modules](disable-modules.md) 
 
   
 ## Kill chain 
