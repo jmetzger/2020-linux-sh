@@ -1,6 +1,6 @@
 # Telekom Security Framework 
 
-  * https://github.com/telekomsecurity/TelekomSecurity.Compliance.Framework
+  * https://github.com/jmetzger/TelekomSecurity.Compliance.Framework/network/members
 
 ```
 # 
