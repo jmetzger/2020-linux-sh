@@ -8,6 +8,7 @@
   1. [Find vulnerabilites with shodan](shodan.io) 
   1. [umask](umask.md) 
   1. [Telekom Security Framework](telekom.md)
+  1. [Unattended Upgrades](unattended-upgrades.md) 
 
   
 ## Kill chain 
