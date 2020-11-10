@@ -9,6 +9,7 @@
   1. [umask](umask.md) 
   1. [Telekom Security Framework](telekom.md)
   1. [Unattended Upgrades](unattended-upgrades.md) 
+  1. [Walkthrough to identify and shutdown service](identify-service.md)
 
   
 ## Kill chain 
