@@ -23,4 +23,12 @@ rkhunter --check
 apt install chkrootkit 
 chkrootkit 
 
+# cat chkrootkit.conf
+# for daily runs 
+RUN_DAILY="true"
+RUN_DAILY_OPTS="-q"
+DIFF_MODE="true"
+
+
+
 ```
