@@ -16,3 +16,10 @@ rkhunter --versioncheck
 rkhunter --check 
 
 ```
+
+## chkrootkit 
+
+```
+apt install chkrootkit 
+
+```
