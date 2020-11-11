@@ -20,3 +20,6 @@ tar czvf initial-aide.tgz /etc/aide/aide.conf /usr/bin/aide /var/lib/aide/aide.d
 ```
 aide.wrapper --check 
 ```
+## Check is done on a daily basis 
+
+/etc/cron.daily/aide 
