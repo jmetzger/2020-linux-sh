@@ -7,9 +7,11 @@ https://www.hostwinds.com/guide/how-to-install-maldet-on-ubuntu/
 https://www.rfxn.com/projects/linux-malware-detect/
 ```
 
-## Installation 
+## Installation (Ubuntu/Debian) - with inotify (Live scan)  
 
 ```
+apt install inotify-tools 
+
 cd /opt/
 wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
 tar xfz maldetect-current.tar.gz
@@ -27,9 +29,34 @@ email_addr=”user@yourdomain.tld”
 #Quarantine any detected malware and send an alert
 quarantine_hits=1
 #Clean the detected malware injections
-quarantine_clean=1
+quarantine_clean=0
 #The default suspend action for infected users. Change to 1 if you wish to suspend the user
 quarantine_suspend_user=0
+# mode 
+default_monitor_mode="/usr/local/maldetect/monitor_paths"
+
+# Testing 
+echo "/var/www" >> /usr/local/maldetect/monitor_paths 
+
+# 
+apt install apache2 
+
+# 
+systemctl start maldet.service 
+
+# 
+cd /var/www/html 
+wget https://secure.eicar.org/eicar.com.txt
+
+# 
+maldet --report list 
+# detected malware !! 
+
+```
+
+## Alternative manual start
+
+```
  
 # Be sure to have the newest signatures
 maldet -d && maldet -u
