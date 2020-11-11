@@ -62,3 +62,9 @@ Nov 11 13:48:59 server2 sshd[56463]: Failed password for invalid user root from 
 Rule: 5710 (level 5) -> 'Attempt to login using a non-existent user'
 Nov 11 13:49:07 server2 sshd[56463]: message repeated 2 times: [ Failed password for invalid user root from 127.0.0.1 port 44032 ssh2]
 ```
+
+## Installation server 1 (agent) 
+
+```
+apt install ossec-hids-agent 
+```
