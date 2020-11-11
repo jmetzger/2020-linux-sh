@@ -21,5 +21,6 @@ rkhunter --check
 
 ```
 apt install chkrootkit 
+chkrootkit 
 
 ```
