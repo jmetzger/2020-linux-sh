@@ -12,6 +12,7 @@
   1. [Walkthrough to identify and shutdown service](identify-service.md)
   1. [Disable Kernel Modules](disable-modules.md) 
   1. [Check for rootkits](check-rootkits.md) 
+  1. [Check for malware](maldet-scanner.md)
 
   
 ## Kill chain 
