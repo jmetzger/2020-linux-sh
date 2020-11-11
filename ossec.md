@@ -254,3 +254,8 @@ root@server2:/var/ossec/rules# vi local_rules.xml
 </group> <!-- SYSLOG,LOCAL -->
 ```
 
+### Restart hids-server (server2) 
+
+```
+ /var/ossec/bin/ossec-control restart
+```
