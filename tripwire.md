@@ -26,7 +26,7 @@ local key: Protect binary files
 # after 
 twadmin --create-polfile /etc/tripwire/twpol.txt
 # or to just update the db 
-# like so--->
+# like so---> secure-mode low is not recommended 
 tripwire --update-policy --secure-mode low /etc/tripwire/twpol.txt
 # or so ---->
 twadmin -m P /etc/tripwire/twpol.txt
