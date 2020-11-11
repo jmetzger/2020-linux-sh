@@ -78,4 +78,75 @@ apt install ossec-hids-agent
   </client>
 
 ```
+
+## Manage Agent (server 1) on server2 (ossec-server) 
+
 ```
+ /var/ossec/bin/manage_agents
+
+
+****************************************
+* OSSEC HIDS v3.6.0 Agent manager.     *
+* The following options are available: *
+****************************************
+   (A)dd an agent (A).
+   (E)xtract key for an agent (E).
+   (L)ist already added agents (L).
+   (R)emove an agent (R).
+   (Q)uit.
+Choose your action: A,E,L,R or Q: A
+
+- Adding a new agent (use '\q' to return to the main menu).
+  Please provide the following:
+   * A name for the new agent: server1
+   * The IP Address of the new agent: 10.10.11.141
+   * An ID for the new agent[001]:
+Agent information:
+   ID:001
+   Name:server1
+   IP Address:10.10.11.141
+
+Confirm adding it?(y/n): y
+Agent added with ID 001.
+
+
+****************************************
+* OSSEC HIDS v3.6.0 Agent manager.     *
+* The following options are available: *
+****************************************
+   (A)dd an agent (A).
+   (E)xtract key for an agent (E).
+   (L)ist already added agents (L).
+   (R)emove an agent (R).
+   (Q)uit.
+Choose your action: A,E,L,R or Q: e
+
+Available agents:
+   ID: 001, Name: server1, IP: 10.10.11.141
+Provide the ID of the agent to extract the key (or '\q' to quit): 1
+
+Agent key information for '001' is:
+MDAxIHNlcnZlcjEgMTAuMTAuMTEuMTQxIDkyMjAyMGQ5NzNjODE4NDM3YmIxZmU5ZDBjMmFmYmMwY2JmMmE2Y2EzNjllMGU5Y2MxNmJkYTc4OTdhYTJmNzc=
+
+** Press ENTER to return to the main menu.
+
+
+
+****************************************
+* OSSEC HIDS v3.6.0 Agent manager.     *
+* The following options are available: *
+****************************************
+   (A)dd an agent (A).
+   (E)xtract key for an agent (E).
+   (L)ist already added agents (L).
+   (R)emove an agent (R).
+   (Q)uit.
+Choose your action: A,E,L,R or Q: q
+
+** You must restart OSSEC for your changes to take effect.
+
+manage_agents: Exiting.
+manage_agents: Exiting.
+root@server2:/var/ossec/logs/alerts#
+```
+
