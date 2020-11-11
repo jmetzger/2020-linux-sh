@@ -14,6 +14,7 @@
   1. [Check for rootkits](check-rootkits.md) 
   1. [Check for malware](maldet-scanner.md)
   1. [OSSEC - HIDS - Scanner](ossec.md) 
+  1. [Cloud-init / userdata / digitalocean](cloud-init.md)
   1. [Linux Security Valuable Docs](docs.md)  
   
 ## Kill chain 
