@@ -14,3 +14,9 @@ aideinit
 ```
 tar czvf initial-aide.tgz /etc/aide/aide.conf /usr/bin/aide /var/lib/aide/aide.db.new
 ```
+
+## Do the check 
+
+```
+aide.wrapper --check 
+```
