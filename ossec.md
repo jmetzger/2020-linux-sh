@@ -205,3 +205,52 @@ root@server1:/var/ossec/etc#
 
 ```
 
+### produce problem on server 1 (agent) 
+
+```
+# enter wrong password 3 times 
+ssh root@localhost
+```
+
+### validatte on server 2 (agent)
+
+```
+you should get an email to root 
+please check 
+
+# if this is not working restart server2 and agent->server1
+server1: /var/ossec/bin/ossec-control restart
+server2: /var/ossec/bin/ossec-control restart
+
+# Please retry to ssh with wrong pw 3 x !!! 
+```
+
+### Change scan config on server2 ossec.conf 
+
+```
+# like so --> first lines 
+ <syscheck>
+    <!-- Frequency that syscheck is executed -- default every 20 hours -->
+    <frequency>120</frequency>
+    <alert_new_files>yes</alert_new_files>
+
+
+    <!-- Directories to check  (perform all possible verifications) -->
+    <directories check_all="yes" report_changes="yes" realtime="yes">/etc,/usr/bin,/usr/sbin</directories>
+    <directories check_all="yes" report_changes="yes" realtime="yes">/bin,/sbin,/boot</directories>
+```
+
+```
+# Adjust local rules 
+root@server2:/var/ossec/rules# vi local_rules.xml
+  <rule id="554" level="7" overwrite="yes">
+     <category>ossec</category>
+     <decoded_as>syscheck_new_entry</decoded_as>
+     <description>File added to system</description>
+     <group>syscheck,</group>
+  </rule>
+
+
+</group> <!-- SYSLOG,LOCAL -->
+```
+
