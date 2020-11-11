@@ -31,4 +31,6 @@ tripwire --update-policy --secure-mode low /etc/tripwire/twpol.txt
 # or so ---->
 twadmin -m P /etc/tripwire/twpol.txt
 
+# check again 
+tripwire --check 
 ```
