@@ -1,4 +1,4 @@
-# Clamav 
+# Clamav (Ubuntu 20.04) 
 
 ## Install 
 
@@ -59,6 +59,8 @@ root@server2:/etc/cron.d#
 
 ## On-Access-Scanning 
 
+  * Documentation: https://www.clamav.net/documents/on-access-scanning
+  
 ```
 # Eventually increase number of possible directories to be obeyed by inotify 
 echo 524288 > /proc/sys/fs/inotify/max_user_watches
