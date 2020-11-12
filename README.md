@@ -15,6 +15,7 @@
   1. [Check for malware](maldet-scanner.md)
   1. [OSSEC - HIDS - Scanner](ossec.md) 
   1. [Cloud-init / userdata / digitalocean](cloud-init.md)
+  1. [firewalld](firewalld.md)
   1. [Linux Security Valuable Docs](docs.md)  
   
 ## Kill chain 
