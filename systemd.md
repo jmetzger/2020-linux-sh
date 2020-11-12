@@ -50,3 +50,17 @@ systemctl disable ssh
     9  timedatectl list-timezones
    10  history
 ```
+
+### Change unit-files (overwriting) 
+
+```
+systemctl edit gsad.service
+# /etc/systemd/system/gsad.service.d/override.conf
+[Unit]
+Description=Jochen's Web GSAD
+
+systemctl cat gsad.service
+systemctl daemon-reload
+systemctl status gsad.service
+
+```
