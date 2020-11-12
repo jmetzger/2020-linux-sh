@@ -16,7 +16,8 @@
   1. [OSSEC - HIDS - Scanner](ossec.md) 
   1. [Cloud-init / userdata / digitalocean](cloud-init.md)
   1. [firewalld](firewalld.md)
-  1. [Linux Security Valuable Docs](docs.md)  
+  1. [Linux Security Valuable Docs](docs.md) 
+  1. [ClamAV-Virus-Scanner](clamav-scannerm.md)
   
 ## Kill chain 
 
