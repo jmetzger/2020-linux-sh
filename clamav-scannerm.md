@@ -43,3 +43,16 @@ ExcludePath ^/root/quarantine
 systemctl restart clamav-daemon 
 ```
 
+## Do weekly scan 
+
+```
+root@server2:/etc/cron.d# cat clamdscan
+0 1 * * * root /usr/bin/clamdscan --fdpass --log=/var/log/clamav/clamdscan.log --move=/root/quarantine /
+root@server2:/etc/cron.d#
+```
+
+## Do manual scan (using clam-daemon ~ clamd) 
+
+```
+/usr/bin/clamdscan --fdpass --log=/var/log/clamav/clamdscan.log --move=/root/quarantine /
+```
