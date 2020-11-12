@@ -39,3 +39,14 @@ https://<ip>:9392
 
 Documentation 
 https://docs.greenbone.net/GSM-Manual/gos-20.08/en/web-interface.html
+
+## PDF - Generation 
+
+```
+# 2 packages are needed for the pdf-generation:
+apt install -y texlive-latex-extra --no-install-recommends
+apt install -y texlive-fonts-recommended
+# after having installed these, pdf generation works ! 
+
+```
+
