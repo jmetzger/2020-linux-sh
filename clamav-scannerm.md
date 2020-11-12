@@ -56,3 +56,18 @@ root@server2:/etc/cron.d#
 ```
 /usr/bin/clamdscan --fdpass --log=/var/log/clamav/clamdscan.log --move=/root/quarantine /
 ```
+
+## On-Access-Scanning 
+
+```
+# Eventually increase number of possible directories to be obeyed by inotify 
+echo 524288 > /proc/sys/fs/inotify/max_user_watches
+
+# Change /etc/clamav/clamd.conf
+# to end of file 
+OnAccessIncludePath /home
+OnAccessIncludePath /var/www
+OnAccessExcludeUname clamav
+OnAccessExcludeRootUID true
+
+# Erstellen eines services 
