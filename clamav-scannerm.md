@@ -69,5 +69,51 @@ OnAccessIncludePath /home
 OnAccessIncludePath /var/www
 OnAccessExcludeUname clamav
 OnAccessExcludeRootUID true
+# If you want to block access file when infected 
+
+
+systemctl restart clamav-daemon 
+# testing on commandline 
+clamonacc --foreground --verbose
+
+# as root set folder /var/www to 777
+sudo chmod 777 /var/www
+
+# second session -> NOT ! with user root BECAUSE: OnAccessExcludeRootUID 
+trainer01:$ touch /var/www/ 
+# detection will be reported in session 1 
+
+# stop foreground service 
+CTRTL + C on session 1 
 
 # Erstellen eines services 
+systemctl edit --full --force clamonacc.service 
+# content >
+# /etc/systemd/system/clamonacc.service
+[Unit]
+Description=ClamAV on Access Scanner
+Requires=clamav-daemon.service
+After=clamav-daemon.service syslog.target network.target
+
+[Service]
+Type=simple
+User=root
+ExecStartPre=/bin/bash -c "while [ ! -S /var/run/clamav/clamd.ctl ]; do sleep 1; done"
+
+ExecStart=/usr/bin/clamonacc -F --log=/var/log/clamav/clamonacc --move=/root/quarantine
+#Restart=on-failure
+#RestartSec=120s
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+```
+# Start and enable service 
+systemctl enable --now clamonacc.service 
+
+# Ready .. Steady .. Go
+```
+
+
