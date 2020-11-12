@@ -33,7 +33,38 @@ firewall-cmd --add-port=82/tcp --persistant
 firewall-cmd --reload 
 ```
 
+## Zones available 
 
+```
+firewall-cmd --get-zones 
+block dmz drop external home internal public trusted work
+```
 
+## Active Zones 
 
+```
+firewall-cmd --get-active-zones
+# in our case empty 
+```
 
+## Add Interface to Zone ~ Active Zone 
+
+```
+firewall-cmd --zone=public --add-interface=enp0s3
+firewall-cmd --get-active-zones 
+
+```
+## Default Zone 
+
+```
+# if not specifically mentioned when using firewall-cmd
+# .. add things to this zone 
+firewall-cmd --get-default-zone
+public
+
+```
+
+## References 
+
+  * https://www.linuxjournal.com/content/understanding-firewalld-multi-zone-configurations#:~:text=Going%20line%20by%20line%20through,or%20source%20associated%20with%20it.
+  * https://www.answertopia.com/ubuntu/basic-ubuntu-firewall-configuration-with-firewalld/
