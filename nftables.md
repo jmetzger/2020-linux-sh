@@ -13,22 +13,29 @@ Starting from Ubuntu 20.10 it will be the default system -> nftables
 ```
 
 ## Walkthrough / migration to nftables 
+
+### take care of current rules 
 ```
-# take care of current rules 
 iptables-save > fwrules.txt
 cat fwrules.txt
 iptables-restore-translate -f fwrules.txt
 iptables-restore-translate -f fwrules.txt > ruleset.nft
+```
 
 # now installing nftables 
+```
 apt install nftables
 # important -> iptables will still work then 
-apt install iptables-nftables-compat
-systemctl enable nftables.service
+# apt install iptables-nftables-compat # not needed for ubuntu 20.04 
+systemctl enable --now nftables.service
+```
+
 
 # now load the rules to nft 
+```
 nft -f ruleset.nft
 nft list ruleset
+```
 
 ## Examples nft 
 ```
