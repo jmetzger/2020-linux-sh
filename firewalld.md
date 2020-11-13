@@ -54,6 +54,13 @@ firewall-cmd --get-active-zones
 # in our case empty 
 ```
 
+## Show information about all zones that are used 
+```
+firewall-cmd --list-all 
+firewall-cmd --list-all-zones 
+```
+
+
 ## Add Interface to Zone ~ Active Zone 
 
 ```
