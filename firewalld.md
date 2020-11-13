@@ -81,6 +81,10 @@ public
 
 ```
 
+## Show services 
+```
+firewall-cmd --get-services 
+```
 ## Adding/Removing a service 
 
 ```
@@ -88,6 +92,12 @@ firewall-cmd --permanent --zone=public --add-service=ssh
 firewall-cmd --reload 
 firewall-cmd --permanent --zone=public --remove-service=ssh
 firewall-cmd --reload 
+```
+
+## Add/Remove ports 
+```
+firewall-cmd --add-port=82/tcp --zone=public --permanent
+
 ```
 
 ## Enable / Disabled icm 
