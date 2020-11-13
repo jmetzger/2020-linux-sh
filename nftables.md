@@ -6,6 +6,7 @@
 iptables -L
 
 In nftables, there are no default chains or tables.
+```
 
 ## Ubuntu 20.04LTS -> 20.10 
 ```
