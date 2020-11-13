@@ -1,5 +1,11 @@
 #  OpenVAS (Ubuntu 20.04LTS)
 
+## Requirements 
+
+  * tested with 1 GB and 25 GB -> does not work, 
+    df -> 100% // GMP error during authentication -> when trying to login 
+  * tested with 2 GB and 50 GB -> WORKS !
+
 ## openvas -> gvm (Greenbone Vulnerability Management) / mrazavi 
 
 ```
