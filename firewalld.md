@@ -67,6 +67,59 @@ public
 
 ```
 
+## Adding/Removing a service 
+
+```
+firewall-cmd --permanent --zone=public --add-service=ssh
+firewall-cmd --reload 
+firewall-cmd --permanent --zone=public --remove-service=ssh
+firewall-cmd --reload 
+```
+
+## Enable / Disabled icm 
+```
+firewall-cmd --get-icmptypes
+# none present yet 
+firewall-cmd --zone=public --query-icmp-block=echo-reply
+# adding it at runtime !! 
+firewall-cmd --zone=public --add-icmp-block=echo-reply
+```
+
+
+
+## Working with rich rules 
+```
+# Documentation 
+# man firewalld.richlanguage
+
+# throttle connectons 
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family=ipv4 source address=10.0.50.10/32 service name=http log level=notice prefix="firewalld rich rule INFO:   " limit value="100/h" accept' 
+firewall-cmd --reload # 
+firewall-cmd --zone=public --list-all
+
+# port forwarding 
+firewall-cmd --get-active-zones
+firewall-cmd --zone=public --list-all
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family=ipv4 source address=10.0.50.10 forward-port port=42343 protocol=tcp to-port=22'
+firewall-cmd --reload 
+firewall-cmd --zone=public --list-all
+firewall-cmd --remove-service=ssh --zone=public
+
+# 
+
+
+# list only the rich rules 
+firewall-cmd --zone=public --list-rich-rules
+
+# persist all runtime rules 
+firewall-cmd --runtime-to-permanent
+
+
+
+
+```
+
+
 ## References 
 
   * https://www.linuxjournal.com/content/understanding-firewalld-multi-zone-configurations#:~:text=Going%20line%20by%20line%20through,or%20source%20associated%20with%20it.
