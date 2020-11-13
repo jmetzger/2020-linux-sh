@@ -1,4 +1,4 @@
-#  OpenVAS 
+#  OpenVAS (Ubuntu 20.04LTS)
 
 ## openvas -> gvm (Greenbone Vulnerability Management) / mrazavi 
 
