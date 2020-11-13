@@ -36,6 +36,10 @@ firewall-cmd --add-port=82/tcp --persistant
 firewall-cmd --reload 
 ```
 
+## Zones documentation 
+
+man firewalld.zones 
+
 ## Zones available 
 
 ```
