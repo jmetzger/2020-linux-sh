@@ -104,12 +104,9 @@ firewall-cmd --add-port=82/tcp --zone=public --permanent
 ```
 firewall-cmd --get-icmptypes
 # none present yet 
-firewall-cmd --zone=public --query-icmp-block=echo-reply
-# adding it at runtime !! 
-firewall-cmd --zone=public --add-icmp-block=echo-reply
+firewall-cmd --zone=public --add-icmp-block-inversion --permanent
+firewall-cmd --reload
 ```
-
-
 
 ## Working with rich rules 
 ```
