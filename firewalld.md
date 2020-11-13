@@ -10,6 +10,9 @@ systemctl status ufw
 # ufw service is still running, but :
 ufw status
 -> disabled # this has to be the case 
+
+# 
+systemctl disable --now ufw.service 
 ```
 
 
